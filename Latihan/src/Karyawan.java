@@ -1,0 +1,56 @@
+public class Karyawan {
+    private String idKaryawan;
+    private String nama;
+    private double gajiPokok;
+    private String departemen;
+
+    public Karyawan(String idKaryawan, String nama) {
+        this.idKaryawan = idKaryawan;
+        this.nama = nama;
+    }
+
+    public String getIdKaryawan() {
+        return idKaryawan;
+    }
+
+    public void setIdKaryawan(String idKaryawan) {
+        this.idKaryawan = idKaryawan;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public double getGajiPokok() {
+        return gajiPokok;
+    }
+
+    public void setGajiPokok(double gajiPokok) {
+        if (gajiPokok < 0) {
+            System.out.println("PERINGATAN!: Gaji tidak boleh negatif! Perubahan ditolak.");
+        } else {
+            this.gajiPokok = gajiPokok;
+        }
+    }
+
+    public String getDepartemen() {
+        return departemen;
+    }
+
+    public void setDepartemen(String departemen) {
+        this.departemen = departemen;
+    }
+
+    public void tampilkanDataKaryawan() {
+        System.out.println(" Profil Karyawan ");
+        System.out.println("ID Karyawan : " + idKaryawan);
+        System.out.println("Nama        : " + nama);
+        System.out.println("Departemen  : " + departemen);
+        System.out.println("Gaji Pokok  : Rp" + gajiPokok);
+        System.out.println("-----------------------");
+    }
+}
