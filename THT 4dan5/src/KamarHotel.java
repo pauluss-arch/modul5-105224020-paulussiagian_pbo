@@ -45,6 +45,11 @@ public class KamarHotel {
         }
     }
 
+     public void batalPesan() {
+        this.isTersedia = true; 
+    }
+
+
     public void pesanKamar() {
         if (isTersedia) {
             isTersedia = false;
@@ -65,10 +70,7 @@ public class KamarHotel {
         }
     }
 
-    public void batalPesan() {
-        this.isTersedia = true; 
-    }
-
+   
     public double hitungTotalBayar(int jumlahMalam) {
         return hargaPerMalam * jumlahMalam;
     }
